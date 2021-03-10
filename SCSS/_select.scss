@@ -1,0 +1,91 @@
+.c-select_wrapper {
+	margin-top: 2rem;
+	outline: 0;
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	width:fit-content;
+	height: 6rem;
+
+	&:focus-within .c-select_label {
+		outline: 2px solid black;
+	}
+}
+
+.c-select_label {
+	position: relative;
+	display: inline-block;
+	height: 6rem;
+	line-height: 5rem;
+	width: 30rem;
+	border: 1px solid black;
+	padding: 0.5rem 20% 0.5rem 1rem;
+}
+
+.c-select_label::after,
+.c-select_label::before {
+	position: absolute;
+  height: 0.2rem;
+	width: 2rem;
+	background-color: black;
+	transition: transform 0.3s ease;
+}
+
+.c-select_label::after {
+  content: '';
+	right: 9.7%;
+	top: 50%;
+	transform: rotate(45deg);
+}
+
+.c-select_label::before {
+  content: '';
+	right: 5%;
+	top: 50%;
+	transform: rotate(-45deg);
+}
+
+.c-select_wrapper:focus-within .c-select_label::before {
+	transform: rotate(45deg);
+}
+
+.c-select_wrapper:focus-within .c-select_label::after {
+	transform: rotate(-45deg);
+}
+
+.c-select_ul {
+	list-style: none;
+	position: absolute;
+	top: 100%;
+	width: 30rem;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.5s;
+
+	&__open {
+		visibility: visible;
+		opacity: 1;
+		pointer-events: all;
+	}
+
+}
+
+.c-select_li {
+	border: 1px solid grey;
+	text-align: left;
+	padding: 0.5rem 1rem;
+	height: 6rem;
+	line-height: 5rem;
+	border-top: 0;
+
+	&:hover {
+		background-color: rgb(2, 2, 2, 0.1);
+		text-align: center;
+		
+	}
+
+	&__selected {
+		background-color: red;
+	}
+}

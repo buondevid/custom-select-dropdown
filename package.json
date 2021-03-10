@@ -1,0 +1,16 @@
+{
+  "name": "custom-dropdown",
+  "version": "1.0.0",
+  "description": "A custom select dropdown to improve your UI.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Davide Briano <davidebriano@gmail.com> (https://github.com/buondevid)",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}
