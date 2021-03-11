@@ -19,6 +19,7 @@ selectAllWrapper.forEach((element) => {
 
 	function selectLi(li) {
 		if (li) {
+			li.scrollIntoView();
 			const selected = li.textContent;
 			li.closest('div').querySelector('span').textContent = selected;
 			li.parentNode.querySelector('.c-select_li__selected')?.classList.remove('c-select_li__selected');
@@ -57,6 +58,7 @@ selectAllWrapper.forEach((element) => {
 			selectUl.classList.remove('c-select_ul__open');
 			break;
 		default:
+			selectUl.classList.toggle('c-select_ul__open', true);
 			clearTimeout(varTimeout);
 			searchWord += e.key;
 			console.log(searchWord);
