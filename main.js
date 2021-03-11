@@ -19,7 +19,7 @@ selectAllWrapper.forEach((element) => {
 
 	function selectLi(li) {
 		if (li) {
-			li.scrollIntoView();
+			li.scrollIntoView({ block: 'nearest' });
 			const selected = li.textContent;
 			li.closest('div').querySelector('span').textContent = selected;
 			li.parentNode.querySelector('.c-select_li__selected')?.classList.remove('c-select_li__selected');
